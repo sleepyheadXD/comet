@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;  
+    color: #e0e0e0; 
+    line-height: 1.5;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.game-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+    padding: 15px 30px;
+    background-color: #111111;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    position: relative; 
+}
+
+#game-title {
+    flex-grow: 1; 
+    text-align: center; 
+    font-size: 24px;
+    font-weight: bolder;
+    color: #f5f5f5;
+}
+
+.game-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #f5f5f5; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-header i {
+    margin-right: 10px;
+}
+
+.header-buttons-left {
+    position: absolute; 
+    left: 50px;
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons-right {
+    position: absolute; 
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#fullscreen-btn {
+    background-color: #222222;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#back-btn {
+    background-color: #222222;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#fullscreen-btn:hover, #back-btn:hover {
+    background-color: #303030;
+    transform: translateY(-2px);
+}
+
+#fullscreen-btn:active, #back-btn:active {
+    transform: translateY(1px);
+}
+
+#game-iframe {
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); 
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #fff;
+    display: none;
+}
+
+#fps-counter {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    backdrop-filter: blur(10px); 
+    font-weight: bolder;
+    z-index: 9999;
+}
