@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgba(156, 156, 156, 0.3);
+    border-top-color: rgb(156, 156, 156);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-screen {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 10; 
+    background-color: #000; 
+}
+
+.loading-text {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	font-size: 18px;
+	transform: translateX(-50%);
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #585858;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7a7a7a;
+    transform: scale(1.1);
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.container {
+    display: flex;
+}
+
+main {
+    margin-left: 215px;
+    padding: 20px;
+    margin-top: 30vh;
+    flex: 1;
+    text-align: center; 
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(34, 34, 34);;
+    backdrop-filter: blur(2px);
+    color: #ffffff;
+    border-radius: 25px;
+    margin-top: 110px; 
+    margin-left: 200px;
+    height: 120px;
+    transition: all 0.3s ease;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a {
+    text-decoration: none;
+}
